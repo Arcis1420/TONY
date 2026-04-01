@@ -33,4 +33,14 @@ public class playerMovement : MonoBehaviour
     {
         
     }
+
+    private void FixedUpdate()
+    {
+        float xAxis = Input.GetAxis("Horizontal");
+        float yAxis = Input.GetAxis("Vertical");
+
+        _rigidbody.velocity = new Vector2(xAxis * 5, yAxis * 5);
+
+    }
+
 }
